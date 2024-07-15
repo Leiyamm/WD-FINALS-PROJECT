@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Yeseva One', serif;
+    background-color: #000;
+}
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0;
+    transition: filter 0.3s ease, opacity 2s;
+    animation: fadeIn 2s forwards;
+}
+
+
+.finals-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111111;
+    border: 2px solid #f4d762;
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    animation: showCard 3s forwards;
+}
+
+.finals-card h1, .finals-card p {
+    margin: 0;
+    color: #f4d762;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: #111111;
+    border-right: 2px solid #f4d762;
+    transition: width 0.3s;
+    z-index: 3;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar .icon {
+    margin-top: 50px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sidebar span {
+    display: none;
+    color: #f4d762;
+}
+
+.sidebar:hover span {
+    display: inline;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showCard {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

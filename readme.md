@@ -53,68 +53,26 @@
 
 ---
 
-## Overview
+# Final Project Landing Page
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
+## Description
+This is the landing page for the final project, featuring a black and gold motif.
 
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+## Structure
+- Landing page with intro animation.
+- Sidebar navigation with hover effects.
+- Interactive card with hover effects.
 
-### Key Components
-<!-- TODO: List of Key Components -->
-<!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+## Technologies
+- HTML
+- CSS
+- JavaScript
 
-### Technology
-<!-- TODO: List of Technology Used -->
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+## Setup
+1. Clone the repository.
+2. Open `index.html` in your web browser.
+3. Ensure the `assets` folder is in the same directory as `index.html`.
 
-## Rules, Practices and Principles
-1. Always use `WD-` in the front of the Title of the Project for the Subject followed by your custom naming.
-2. Do not rename any .html files; always use `index.html` as the filename.
-3. Place Files in their respective folders.
-4. All file naming are in camel case.
-   - Camel case is naming format where there is no white space in separation of each words, the first word is in all lower case while the succeding words first letter are in upper followed by lower cased letters.
-   - ex.: buttonAnimatedStyle.css
-5. Use only `External CSS`.
-6. Renaming of Pages folder names are a must, and relates to what it is doing or data it holding.
-7. File Structure to follow below.
-
-```
-WD-ProjectName
-└─ assets
-|   └─ css
-|   |   └─ style.css
-|   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
-|   └─ js
-|       └─ script.js
-└─ pages
-|  └─ pageName
-|     └─ assets
-|     |  └─ css
-|     |  |  └─ style.css
-|     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ script.js
-|     └─ index.html
-└─ index.html
-└─ readme.md
-```
-
-## Resources
-
-<!-- TODO: Add References -->
-| Title | Purpose | Link |
-|-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+## Fonts
+- Yeseva One
+- Josefin Slab

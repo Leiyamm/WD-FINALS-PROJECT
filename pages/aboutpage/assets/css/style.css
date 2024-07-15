@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Josefin Slab', serif;
+    background-color: #111111;
+    color: #f4d762;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.glow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: transparent;
+    animation: glowFadeIn 2s 1s ease-in-out forwards;
+    box-shadow: 0px 0px 80px 30px #f4d762;
+    transform-origin: bottom;
+}
+
+.photo-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: photoFadeIn 2s 3s ease-in-out forwards;
+}
+
+.about-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #f4d762;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-photo:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.about-photo:hover + .description {
+    display: block;
+}
+
+.description h1 {
+    margin: 5;
+    font-family: 'Yeseva One', serif;
+}
+
+.description p {
+    margin: 20px 0 0 20px;
+    font-size: 1.4em; /* Adjustable text size */
+}
+
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.back-button {
+    padding: 10px 30px;
+    background-color: #111111;
+    color: #f4d762;
+    text-decoration: none;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 700;
+    border: 2px solid #f4d762;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f4d762;
+    color: #111111;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes glowFadeIn {
+    0% { height: 0; }
+}
+
+@keyframes photoFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
