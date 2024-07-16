@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Slab', sans-serif;
+    background-color: #f4d762; /* Adjust as needed */
+}
+
+header {
+    text-align: center;
+    font-family: 'Josefin Slab', sans-serif;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #555;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Starts invisible */
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Starts invisible */
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+.photo-container img.active {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Adjust scale factor as needed */
+}
+
+.photo-container img.active:hover {
+    transform: translate(-50%, -50%) scale(2.2); /* Increase scale on hover */
+}
+
+.photo-container img.active + .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.photo-container img.active + .close-button {
+    opacity: 1;
+    pointer-events: auto;
+}

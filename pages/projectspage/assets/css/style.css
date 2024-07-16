@@ -1,0 +1,167 @@
+.body {
+    width: 100%;
+    height: 100vh;
+    background: #f4d762;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Slab', serif;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.portfolio-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #f4d762;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 20;
+}
+
+.project-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 10;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    list-style: none;
+}
+
+.project-wrapper .project-name a {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: block;
+    text-align: left;
+    padding: 0;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Yeseva One', sans-serif;
+    font-weight: 200;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    color: #f4d762;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: all 300ms linear;
+}
+
+.project-wrapper .project-name a:hover {
+    opacity: 1;
+    color: #ccb452;
+}
+
+.project-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.project-images li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    list-style: none;
+    transition: opacity 300ms ease;
+}
+
+.project-images li .img-hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.project-images li.show .img-hero-background {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-images li .dark-over-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #050505;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+
+.project-images li:hover .dark-over-hero {
+    opacity: 0.5;
+}
+
+.project-images li .project-title {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #f4d762;
+    opacity: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    writing-mode: vertical-lr;
+    transform: translateX(100%);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.project-images li.show .project-title {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.overlay-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f4d762;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+
+.show .overlay-background {
+    opacity: 0.6;
+    pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 20px;
+    }
+
+    .project-wrapper .project-name a {
+        font-size: 24px;
+    }
+
+    .project-images li .project-title {
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+    }
+}
